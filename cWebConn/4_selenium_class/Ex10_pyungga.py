@@ -16,4 +16,9 @@ html = driver.page_source
 time.sleep(3)
 soup = BeautifulSoup(html,'html.parser')
 
-print(soup)
+# print(soup)
+mna = soup.select('.item .wrap')
+# print(mna)
+for mn in mna:
+    name = mn.select('.tit')[0].text
+    print(name)
